@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Quagga from 'quagga';
+import Quagga from '@ericblade/quagga2';
 
 export default {
   name: 'QuaggaScanner',
