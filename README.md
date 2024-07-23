@@ -15,94 +15,29 @@ yarn add quagga2-vue3
 ```
 
 ```
-<template>
-  <div>
-    <QuaggaScanner :onDetected="logIt" :readerSize="readerSize" :readerTypes="['ean_reader']"></QuaggaScanner>
-  </div>
-</template>
-
 <script>
-import Vue from 'vue'
-import VueQuagga from 'vue-quaggajs';
-
-// register component 'v-quagga'
-Vue.use(VueQuagga);
-
-export default {
-  name: 'VueBarcodeTest',
-  data () {
-    return {
-      readerSize: {
-        width: 640,
-        height: 480
-      },
-      detecteds: []
-    }
-  },
-  methods: {
-    logIt (data) {
-      console.log('detected', data)
-    }
-
-  }
-}
+import { QuaggaScanner } from "vue3-quagga2";
 </script>
+
+<template>
+  <QuaggaScanner
+    :on-detected="(data) => console.log(data)"
+    :reader-types="['ean_reader']"
+  />
+</template>
 ```
 
-You can find an example usage in the /example folder.
+You can find an example usage in the /example folder. Check the component for available props
 
-# Usage
+## 💡 Inspired by
 
-### `onDetected` : function(result)
+quagga2/quaggaJS related projects:
 
-Reference: [Quagga.onDetected(callback)](https://github.com/serratus/quaggaJS#quaggaondetectedcallback)
-
-default function:
-
-```js
-function (result) {
-  console.log('detected: ', result);
-}
-```
-
-### `onProcessed` : function(result)
-
-Reference: [Quagga.onProcessed(callback)](https://github.com/serratus/quaggaJS#quaggaonprocessedcallback)
-
-default function:
-
-```js
-function (result) {
-  let drawingCtx = Quagga.canvas.ctx.overlay,
-    drawingCanvas = Quagga.canvas.dom.overlay;
-
-  if (result) {
-    if (result.boxes) {
-      drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
-      result.boxes.filter(function (box) {
-        return box !== result.box;
-      }).forEach(function (box) {
-        Quagga.ImageDebug.drawPath(box, {x: 0, y: 1}, drawingCtx, {color: "green", lineWidth: 2});
-      });
-    }
-    if (result.box) {
-      Quagga.ImageDebug.drawPath(result.box, {x: 0, y: 1}, drawingCtx, {color: "#00F", lineWidth: 2});
-    }
-
-    if (result.codeResult && result.codeResult.code) {
-      Quagga.ImageDebug.drawPath(result.line, {x: 'x', y: 'y'}, drawingCtx, {color: 'red', lineWidth: 3});
-    }
-  }
-},
-```
-
-### readerTypes: String[]
-
-Set reading barcode type.
-
-Reference: [https://github.com/serratus/quaggaJS#decoder](https://github.com/serratus/quaggaJS#decoder)
-
-default: `['code_128_reader']`
+- [ericblade/quagga2](https://github.com/ericblade/quagga2) (active fork of quaggaJS)
+- [serratus/quaggaJS](https://github.com/serratus/quaggaJS) (seems to be no longer maintained)
+- [vue3-quagga2](https://github.com/florianrusch/vue3-quagga2) (not completed)
+- [sin-tanaka/vue-quagga](https://github.com/sin-tanaka/vue-quagga)
+- <https://codesandbox.io/s/hidden-star-361gx>
 
 ## License
 
