@@ -1,18 +1,18 @@
 ![](https://cdn-images-1.medium.com/max/1600/1*u5EN9YE4S2R7QbJ-rHOZpg.gif)
 
-# vue3-quaggajs
+# quagga2-vue3
 
-[quaggajs](https://serratus.github.io/quaggaJS/) 's wrapper for Vue.js. **Updated for vue 3!**
+> Vue3 wrapper for [ericblade/quagga2](https://github.com/ericblade/quagga2)
 
-# Installtion
+## ⚙️ Usage
 
-## npm
+Add the dependency to your project:
 
-```bash
-npm i vue3-quaggajs
+```shell
+npm i quagga2-vue3
+# OR
+yarn add quagga2-vue3
 ```
-
-# Basic Example
 
 ```
 <template>
@@ -48,6 +48,8 @@ export default {
 }
 </script>
 ```
+
+You can find an example usage in the /example folder.
 
 # Usage
 
@@ -101,3 +103,7 @@ Set reading barcode type.
 Reference: [https://github.com/serratus/quaggaJS#decoder](https://github.com/serratus/quaggaJS#decoder)
 
 default: `['code_128_reader']`
+
+## License
+
+The project is licensed under the ["MIT license"](./LICENSE).
