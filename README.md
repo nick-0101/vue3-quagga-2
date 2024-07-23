@@ -1,15 +1,15 @@
 ![](https://cdn-images-1.medium.com/max/1600/1*u5EN9YE4S2R7QbJ-rHOZpg.gif)
 
-# vue-quaggajs
+# vue3-quaggajs
 
-[quaggajs](https://serratus.github.io/quaggaJS/) 's wrapper for Vue.js
+[quaggajs](https://serratus.github.io/quaggaJS/) 's wrapper for Vue.js. **Updated for vue 3!**
 
 # Installtion
 
 ## npm
 
-``` bash
-npm i vue-quaggajs
+```bash
+npm i vue3-quaggajs
 ```
 
 # Basic Example
@@ -17,7 +17,7 @@ npm i vue-quaggajs
 ```
 <template>
   <div>
-    <v-quagga :onDetected="logIt" :readerSize="readerSize" :readerTypes="['ean_reader']"></v-quagga>
+    <QuaggaScanner :onDetected="logIt" :readerSize="readerSize" :readerTypes="['ean_reader']"></QuaggaScanner>
   </div>
 </template>
 
@@ -48,7 +48,6 @@ export default {
 }
 </script>
 ```
-
 
 # Usage
 
