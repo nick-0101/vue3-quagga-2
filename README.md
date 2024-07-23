@@ -101,29 +101,3 @@ Set reading barcode type.
 Reference: [https://github.com/serratus/quaggaJS#decoder](https://github.com/serratus/quaggaJS#decoder)
 
 default: `['code_128_reader']`
-
-### readerSize: Object {width: Number, height: Number}
-
-Set reader size. it affects <video> size.
-
-default:
-
-```js
-{
-  width: 640,
-  height: 480,
-}
-```
-
-### aspectRatio: Object {min: Number, max: Number}
-
-Set aspect ratio. it affects <video> aspect ratio.
-
-default:
-
-```js
-{
-  min: 1,
-  max: 2,
-}
-```
