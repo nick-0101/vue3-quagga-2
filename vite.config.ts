@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     emptyOutDir: false,
     lib: {
-      entry: path.resolve(__dirname, "src/main.ts"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       formats: ["es"],
       name: "vue3-quagga-2",
     },
