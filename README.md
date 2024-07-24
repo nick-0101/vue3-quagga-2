@@ -1,5 +1,3 @@
-![](https://cdn-images-1.medium.com/max/1600/1*u5EN9YE4S2R7QbJ-rHOZpg.gif)
-
 # quagga2-vue3
 
 > Vue3 wrapper for [ericblade/quagga2](https://github.com/ericblade/quagga2)
