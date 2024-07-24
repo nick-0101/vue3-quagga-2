@@ -4,7 +4,7 @@
   "type": "module",
   "module": "./dist/vue3-quagga-2.js",
   "types": "./dist/main.d.ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "nick-0101",
   "license": "MIT",
   "scripts": {
